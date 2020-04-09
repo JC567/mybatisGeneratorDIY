@@ -1,0 +1,2 @@
+# mybatisGeneratorDIY
+custom mybatisGenerator
