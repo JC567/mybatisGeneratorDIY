@@ -17,11 +17,11 @@
         </commentGenerator>
 
         <!-- 数据库的相关配置 -->
-        <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://10.20.32.76:3306/ztlpyjy2020?useUnicode=true&amp;characterEncoding=utf-8" userId="root" password="Caifu123">
-<!--        <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://10.20.26.247:33061/zyt_liuyl?useUnicode=true&amp;characterEncoding=utf-8" userId="root" password="mysql">-->
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://xxxx:3306/ztlpyjy2020?useUnicode=true&amp;characterEncoding=utf-8" userId="root" password="Caifu123">
+<!--        <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://xxxx:33061/zyt_liuyl?useUnicode=true&amp;characterEncoding=utf-8" userId="root" password="mysql">-->
             <property name="useInformationSchema" value="true"></property>
         </jdbcConnection>
-        <!--<jdbcConnection driverClass="oracle.jdbc.driver.OracleDriver" connectionURL="jdbc:oracle:thin:@10.20.35.217:1521:orcl" userId="finiia" password="finiia"/>-->
+        <!--<jdbcConnection driverClass="oracle.jdbc.driver.OracleDriver" connectionURL="jdbc:oracle:thin:@xxxx:1521:orcl" userId="finiia" password="finiia"/>-->
 
         <javaTypeResolver>
             <property name="forceBigDecimals" value="false"/>
