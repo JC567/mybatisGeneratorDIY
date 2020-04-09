@@ -44,7 +44,7 @@
 
         </javaClientGenerator>
         <!-- 相关表的配置 -->
-        <table tableName="TC_TREQUEST" domainObjectName="Request1"
+        <table tableName="TC_TREQUEST" domainObjectName="Request" mapperName="RequestDao"
                enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
                enableUpdateByExample="false"
                enableSelectByPrimaryKey="true" enableUpdateByPrimaryKey="true" enableDeleteByPrimaryKey="true" >
