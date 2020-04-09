@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC
+        "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration>
+
+    <!-- 本地数据库驱动程序jar包的全路径 -->
+    <classPathEntry location="D://Maven//repo//mysql//mysql-connector-java//5.1.47//mysql-connector-java-5.1.47.jar"/>
+    <!--<classPathEntry location="D://Program Files//instantclient_12_1//ojdbc6.jar"/>-->
+
+    <context id="context" targetRuntime="MyBatis3" defaultModelType="flat">
+
+        <!-- 指定生成的java文件的编码,没有直接生成到项目时中文可能会乱码 -->
+        <property name="javaFileEncoding" value="UTF-8"/>
+        <commentGenerator type="com.jc.MyCommentGenerator">
+        </commentGenerator>
+
+        <!-- 数据库的相关配置 -->
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://192.168.8.131:3306/tradecenter?useUnicode=true&amp;characterEncoding=utf-8" userId="jc" password="jc">
+            <property name="useInformationSchema" value="true"></property>
+        </jdbcConnection>
+        <!--<jdbcConnection driverClass="oracle.jdbc.driver.OracleDriver" connectionURL="jdbc:oracle:thin:@10.20.35.217:1521:orcl" userId="finiia" password="finiia"/>-->
+
+        <javaTypeResolver>
+            <property name="forceBigDecimals" value="false"/>
+        </javaTypeResolver>
+
+        <!-- 实体类生成的位置 -->
+        <javaModelGenerator targetPackage="com.jc.pojo" targetProject="src/main/java">
+            <property name="enableSubPackages" value="true"/>
+            <property name="trimStrings" value="true"/>
+        </javaModelGenerator>
+
+        <!-- *Mapper.xml 文件的位置 -->
+        <sqlMapGenerator targetPackage="com.jc.mapper" targetProject="src/main/resources">
+            <property name="enableSubPackages" value="false"/>
+        </sqlMapGenerator>
+
+        <!-- Mapper 接口文件的位置 -->
+        <javaClientGenerator targetPackage="com.jc.dao" targetProject="src/main/java" type="XMLMAPPER">
+            <property name="enableSubPackages" value="false"/>
+        </javaClientGenerator>
+
+        <!-- 相关表的配置 -->
+        <table tableName="IIA_TPRODUCTMARKET" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
+               enableUpdateByExample="false">
+            <!--<domainObjectRenamingRule searchString="^TcT" replaceString="" />-->
+            <columnRenamingRule searchString="^[^IIA_]+" replaceString=""/>
+        </table>
+    </context>
+</generatorConfiguration>
